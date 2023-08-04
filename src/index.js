@@ -7,12 +7,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Master from './pages/Master';
 import Home from './pages/Home';
 import Aboutus from './pages/Aboutus';
+import NotFound from './pages/NotFound';
+import Profile from './pages/Profile';
 
 const router =
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<Master item={<Home />}/>} />
             <Route path='/aboutus' element={<Master item={<Aboutus />}/>} />
+            <Route path='/Profile' element={<Master item={<Profile />}/>} />
+            <Route path='*' element={<NotFound/>}/>
         </Routes>
     </BrowserRouter>
 
